@@ -1,26 +1,39 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Header></Header>
+  <router-view v-slot="{ Component }">
+    <transition class="transition" :name="transitionName">
+      <keep-alive :max="1">
+        <component
+          v-if="route.meta.keepAlive"
+          :is="Component"
+          :key="route.fullPath"
+        />
+      </keep-alive>
+    </transition>
+    <transition class="transition" :name="transitionName">
+      <component
+        v-if="!route.meta.keepAlive"
+        :is="Component"
+        :key="route.path"
+      />
+    </transition>
+  </router-view>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script setup>
+import { ref } from 'vue';
+import Header from '@/components/Header.vue'
+import { useRoute, useRouter } from 'vue-router';
+const router = useRouter();
+const route = useRoute();
+const transitionName = ref('');
 </script>
 
-<style>
+<style lang="scss">
+@import '@/scss/reset.scss';
+@import '@/scss/common.scss';
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+ width: 100%;
+ text-align: center;
 }
 </style>
