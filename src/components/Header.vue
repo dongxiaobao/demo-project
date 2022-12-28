@@ -7,7 +7,9 @@
       :ellipsis="false"
       @select="handleSelect"
     >
-      <el-menu-item index="0">LOGO</el-menu-item>
+      <el-menu-item index="0">
+        <img src="@/assets/logo.png" alt="" class="logo" />
+      </el-menu-item>
       <div class="flex-grow" />
       <el-menu-item index="1">HOME</el-menu-item>
       <el-sub-menu index="2">
@@ -54,11 +56,11 @@ const handleSelect = (key, keyPath) => {
     router.push({
       path: "/overview",
     });
-  }else if (key == '1') {
+  } else if (key == "1") {
     router.push({
       path: "/overview",
     });
-  }  else if (key == "2-1") {
+  } else if (key == "2-1") {
     router.push({
       path: "/team",
     });
@@ -116,6 +118,10 @@ const handleSelect = (key, keyPath) => {
   .el-menu {
     width: 1200px;
     margin: 0 auto;
+    .logo {
+      width: 138px;
+      height: 59px;
+    }
   }
   .flex-grow {
     flex-grow: 1;
