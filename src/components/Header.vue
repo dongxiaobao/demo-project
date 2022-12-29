@@ -7,49 +7,70 @@
       :ellipsis="false"
       @select="handleSelect"
     >
-      <el-menu-item index="0">
-        <img src="@/assets/logo.png" alt="" class="logo" />
+      <el-menu-item index="0" class="left-logo">
+        <img src="@/assets/logo.jpg" alt="" class="logo" />
+        <span class="text-title">
+          Building Resillience with<br />Information and Dialogues<br />for
+          Grouth and Equality
+        </span>
       </el-menu-item>
       <div class="flex-grow" />
-      <el-menu-item index="1">HOME</el-menu-item>
-      <el-sub-menu index="2">
+      <el-menu-item index="1" class="title-name">HOME</el-menu-item>
+      <el-sub-menu index="2" class="title-name">
         <template #title>ABOUT BRIDGE</template>
         <el-menu-item index="2-1">TEAM</el-menu-item>
         <el-menu-item index="2-2">PARTNERS</el-menu-item>
         <el-menu-item index="2-3">RELATED PROJECTS</el-menu-item>
       </el-sub-menu>
-      <el-sub-menu index="3">
+      <el-sub-menu index="3" class="title-name">
         <template #title>HOW WE WORK</template>
         <el-menu-item index="3-1">ROADMAP</el-menu-item>
         <el-menu-item index="3-2">SUB PROJECTS</el-menu-item>
         <el-menu-item index="3-3">DELIVERABLES</el-menu-item>
       </el-sub-menu>
-      <el-sub-menu index="4">
+      <el-sub-menu index="4" class="title-name">
         <template #title>DISSEMINATION</template>
         <el-menu-item index="4-1">NEWS & EVENTS</el-menu-item>
         <el-menu-item index="4-2">WEBINARS</el-menu-item>
         <el-menu-item index="4-3">SOCIAL MEDIA</el-menu-item>
       </el-sub-menu>
-      <el-sub-menu index="5">
+      <el-sub-menu index="5" class="title-name">
         <template #title>IMPACT</template>
         <el-menu-item index="5-1">SCIENTFIC IMPACT</el-menu-item>
         <el-menu-item index="5-2">PUBLICATIONS</el-menu-item>
         <el-menu-item index="5-3">DATABSETS</el-menu-item>
       </el-sub-menu>
+      <div class="search-box">
+        <div class="top-box">
+          <span class="icon icon-1"></span>
+          <span class="icon icon-2"></span>
+          <span class="icon icon-3"></span>
+          <span class="icon icon-4"></span>
+          <span class="line"></span>
+          <span class="text">Events</span>
+          <span class="line"></span>
+          <span class="text">Contacts</span>
+        </div>
+        <div class="center-box">
+          <input type="text" class="search" />
+          <el-icon :size="15"><Search /></el-icon>
+        </div>
+      </div>
     </el-menu>
   </div>
 </template>
 
 <script setup>
-import { ElMenu, ElMenuItem, ElSubMenu } from "element-plus";
+import { ElMenu, ElMenuItem, ElSubMenu, ElIcon } from "element-plus";
 import "element-plus/es/components/menu/style/css";
-// import {meanList} from '@/config/menu.js'
+import { Search } from "@element-plus/icons-vue";
 import { useRoute, useRouter } from "vue-router";
 const router = useRouter();
 const route = useRoute();
 import { ref } from "vue";
 
 const activeIndex = ref("1");
+let input1 = ref("");
 const handleSelect = (key, keyPath) => {
   console.log(key, keyPath);
   if (key == 0) {
@@ -115,16 +136,97 @@ const handleSelect = (key, keyPath) => {
 <style lang="scss">
 .header {
   min-width: 1200px;
+  height: 113px;
   .el-menu {
     width: 1200px;
     margin: 0 auto;
+    height: 113px;
+    .left-logo {
+      .text-title {
+        margin-left: 20px;
+        border-left: #d45d68 1px solid;
+        text-align: left;
+        word-break: break-all !important;
+        width: 210px;
+        font-size: 17px;
+        line-height: 28px;
+        color: #d45d68;
+        height: 88px;
+        padding-left: 7px;
+      }
+    }
     .logo {
-      width: 138px;
-      height: 59px;
+      width: 153px;
+      height: 55px;
+    }
+    .el-menu-item {
+      color: #0f70b8;
+      &.is-active {
+        border-bottom: none;
+      }
+    }
+    .title-name {
+      padding: 0 5px;
+      height: 30px;
+      margin: auto 0;
+      .el-sub-menu__title {
+        padding: 0 10px;
+      }
+      .el-icon {
+        right: -10px;
+      }
     }
   }
   .flex-grow {
     flex-grow: 1;
+  }
+  .search-box {
+    width: 150px;
+    padding-left: 20px;
+    padding-top: 5px;
+    .top-box {
+      width: 207px;
+      margin-left: -80px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      .icon {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+      .icon-1,
+      .icon-2,
+      .icon-3,
+      .icon-4 {
+        background: green;
+        margin-right: 3px;
+      }
+      .text {
+        font-size: 13px;
+        cursor: pointer;
+      }
+      .line {
+        width: 2px;
+        height: 13px;
+        margin: 0 4px;
+        background: #222;
+      }
+    }
+    .center-box {
+      height: 25px;
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .search {
+        width: 100px;
+        border-bottom: 1px solid rgba(29, 29, 29, 0.3);
+      }
+      .el-icon {
+        cursor: pointer;
+      }
+    }
   }
 }
 </style>

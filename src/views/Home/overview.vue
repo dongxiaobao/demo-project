@@ -1,7 +1,7 @@
 <template>
   <div class="over-view">
     <header class="header">
-      <img src="@/assets/logo.png" alt="" class="banner" />
+      <img src="@/assets/banner1.png" alt="" class="banner" />
     </header>
     <!-- 文字内容区域 -->
     <main class="mian">
