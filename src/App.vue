@@ -18,11 +18,13 @@
       />
     </transition>
   </router-view>
+  <FooterWrap></FooterWrap>
 </template>
 
 <script setup>
 import { ref } from 'vue';
 import Header from '@/components/Header.vue'
+import FooterWrap from '@/components/FooterWrap.vue'
 import { useRoute, useRouter } from 'vue-router';
 const router = useRouter();
 const route = useRoute();

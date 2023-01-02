@@ -42,10 +42,9 @@
       </el-sub-menu>
       <div class="search-box">
         <div class="top-box">
-          <span class="icon icon-1"></span>
-          <span class="icon icon-2"></span>
-          <span class="icon icon-3"></span>
-          <span class="icon icon-4"></span>
+          <span class="icon icon-1" @click="toPage('1')"></span>
+          <span class="icon icon-2" @click="toPage('2')"></span>
+          <span class="icon icon-3" @click="toPage('3')"></span>
           <span class="line"></span>
           <span class="text">Events</span>
           <span class="line"></span>
@@ -131,12 +130,22 @@ const handleSelect = (key, keyPath) => {
     });
   }
 };
+const toPage = (index) => {
+  if (index == "1") {
+    window.open(`https://twitter.com/?lang=en`);
+  } else if (index == "2") {
+    window.open(`https://www.linkedin.cn`);
+  } else {
+    window.open(`https://www.youtube.com`);
+  }
+};
 </script>
 
 <style lang="scss">
 .header {
   min-width: 1200px;
   height: 113px;
+  border-bottom: 1px solid #ddd;
   .el-menu {
     width: 1200px;
     margin: 0 auto;
@@ -186,21 +195,33 @@ const handleSelect = (key, keyPath) => {
     padding-top: 5px;
     .top-box {
       width: 207px;
-      margin-left: -80px;
+      margin-left: -61px;
       height: 20px;
       display: flex;
       align-items: center;
       .icon {
-        width: 20px;
-        height: 20px;
+        width: 16px;
+        height: 16px;
         cursor: pointer;
       }
       .icon-1,
       .icon-2,
       .icon-3,
       .icon-4 {
-        background: green;
-        margin-right: 3px;
+        margin-right: 10px;
+      }
+      .icon-1 {
+        background: url(@/assets/icon/tuite.png) no-repeat center;
+        background-size: contain;
+      }
+      .icon-2 {
+        background: url(@/assets/icon/linkedin.png) no-repeat center;
+        background-size: contain;
+      }
+      .icon-3 {
+        background: url(@/assets/icon/youtube.png) no-repeat center;
+        background-size: contain;
+        margin-right: 4px;
       }
       .text {
         font-size: 13px;
