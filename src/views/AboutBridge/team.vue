@@ -8,6 +8,7 @@
       (CityU), Prof. Qingpeng ZHANG (CityU), Prof. Yue DAI (CityU), Prof.
       Xiaohui WANG (CityU)
     </p> -->
+    <!-- 1)PC: Prof. Yi-Hui Christine HUANG (CityU) 2)Co-PIs: Prof. David Shu-Cheong HUI (CUHK), Prof. Richard WALKER (CityU), Prof. Tse-Chun LIN (HKU), Prof. Crystal Li JIANG (CityU), Prof. Fen LIN (CityU), Prof. Ye SUN (CityU), Prof. Qingpeng ZHANG (CityU), Prof. Yue DAI (CityU), Prof. Xiaohui WANG (CityU) -->
     <section class="hoster">
       <img
         src="@/assets/team/Yi-Hui_Christine_Huang.jpeg"
@@ -72,33 +73,40 @@ userList2.value = teamList2;
         width: 150px;
         margin-bottom: 20px;
         &.img-user-0{
-
+          margin-bottom: 44px;
         }
         &.img-user-1{
           margin-bottom: 20px;
         }
         &.img-user-2{
           width: 180px;
-          margin-top: 20px;
-          margin-bottom: 46px;
+          // margin-top: 20px;
+          margin-bottom: 53px;
         }
-        &.img-user-3{}
+        &.img-user-3{
+
+        }
         &.img-user-4{
-          margin-bottom: 45px;
+          // margin-bottom: 10px;
         }
         &.img-user-5{
-          width: 180px;
-          margin-top: 10px;
-          margin-bottom: 45px;
+         
+          margin-bottom: 30px;
         }
         &.img-user-6{
-          width: 160px;
-          margin-bottom: 20px;
-        }
-        &.img-user-8{
           width: 180px;
           margin-top: 10px;
-          margin-bottom: 35px;
+          margin-bottom: 40px;
+        }
+        &.img-user-7{
+          width: 180px;
+          margin-top: 10px;
+          margin-bottom: 31px;
+        }
+        &.img-user-8{
+          width: 160px;
+        
+          
         }
       }
       .text-user-info{
@@ -106,6 +114,25 @@ userList2.value = teamList2;
       line-height: 1.5;
       font-weight: 700;
       color:#222;
+    }
+    &:nth-child(2){
+      // padding-left: 20px;
+      text-align: center;
+    }
+    &:nth-child(3){
+      text-align: right;
+    }
+    &:nth-child(6){
+      text-align: right;
+    }
+    &:nth-child(9){
+      text-align: right;
+    }
+    &:nth-child(5){
+      text-align: center;
+    }
+    &:nth-child(8){
+      text-align: center;
     }
     }
   }

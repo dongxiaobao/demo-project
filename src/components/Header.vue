@@ -144,13 +144,18 @@ const toPage = (index) => {
 <style lang="scss">
 .header {
   min-width: 1200px;
-  height: 113px;
+  height: 150px;
   border-bottom: 1px solid #ddd;
+  // margin-top: 30px;
   .el-menu {
     width: 1200px;
     margin: 0 auto;
-    height: 113px;
+    height: 150px;
     .left-logo {
+      padding-left: 0;
+      &:hover{
+        // background: none;
+      }
       .text-title {
         margin-left: 20px;
         border-left: #d45d68 1px solid;
@@ -169,7 +174,7 @@ const toPage = (index) => {
       height: 55px;
     }
     .el-menu-item {
-      color: #0f70b8;
+      color: #49b4f7;
       &.is-active {
         border-bottom: none;
       }
@@ -178,8 +183,13 @@ const toPage = (index) => {
       padding: 0 5px;
       height: 30px;
       margin: auto 0;
+      font-size: 16px;
+      line-height: 1.5;
       .el-sub-menu__title {
         padding: 0 10px;
+        font-size: 16px;
+        line-height: 1.5;
+        border-bottom: none;
       }
       .el-icon {
         right: -10px;
@@ -190,12 +200,12 @@ const toPage = (index) => {
     flex-grow: 1;
   }
   .search-box {
-    width: 150px;
+    width: 50px;
     padding-left: 20px;
-    padding-top: 5px;
+    padding-top: 10px;
     .top-box {
       width: 207px;
-      margin-left: -61px;
+      margin-left: -124px;
       height: 20px;
       display: flex;
       align-items: center;
@@ -236,12 +246,12 @@ const toPage = (index) => {
     }
     .center-box {
       height: 25px;
-      margin-top: 20px;
+      margin-top: 32px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       .search {
-        width: 100px;
+        width: 50px;
         border-bottom: 1px solid rgba(29, 29, 29, 0.3);
       }
       .el-icon {

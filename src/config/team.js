@@ -10,18 +10,8 @@ import Yi_Hui_Christine_Huang from "@/assets/team/Yi-Hui_Christine_Huang.jpeg";
 import Yue_Dai from "@/assets/team/Yue_Dai.jpeg";
 const teamList1 = [
   {
-    img: Fen_Lin,
-    userInfo: "Prof. Fen LIN (CityU)",
-    description: "介绍",
-  },
-  {
-    img: Li_Crystal_Jiang,
-    userInfo: "Prof. Crystal Li JIANG (CityU)",
-    description: "介绍",
-  },
-  {
-    img: Qingpeng_Zhang,
-    userInfo: "Prof. Qingpeng ZHANG (CityU)",
+    img: Shu_Cheong_David_Hui,
+    userInfo: "Prof. DavidShu-Cheong HUI (CUHK)",
     description: "介绍",
   },
   {
@@ -30,18 +20,18 @@ const teamList1 = [
     description: "介绍",
   },
   {
-    img: Shu_Cheong_David_Hui,
-    userInfo: "Prof. DavidShu-Cheong HUI (CUHK)",
-    description: "介绍",
-  },
-  {
     img: Tse_Chun_LIn,
     userInfo: "Prof. Tse-Chun LIN (HKU)",
     description: "介绍",
   },
   {
-    img: Xiaohui_Wang,
-    userInfo: "Prof.Xiaohui WANG (CityU)",
+    img: Li_Crystal_Jiang,
+    userInfo: "Prof. Crystal Li JIANG (CityU)",
+    description: "介绍",
+  },
+  {
+    img: Fen_Lin,
+    userInfo: "Prof. Fen LIN (CityU)",
     description: "介绍",
   },
   {
@@ -49,16 +39,31 @@ const teamList1 = [
     userInfo: "Prof. Ye SUN (CityU)",
     description: "介绍",
   },
-  // {
-  //   img: Yi_Hui_Christine_Huang,
-  //   userInfo: "Prof. Yi-Hui Christine HUANG (CityU)",
-  //   description: "介绍",
-  // },
+
+  {
+    img: Qingpeng_Zhang,
+    userInfo: "Prof. Qingpeng ZHANG (CityU)",
+    description: "介绍",
+  },
+
+  
   {
     img: Yue_Dai,
     userInfo: "Prof. Yue DAI (CityU)",
     description: "介绍",
   },
+  {
+    img: Xiaohui_Wang,
+    userInfo: "Prof.Xiaohui WANG (CityU)",
+    description: "介绍",
+  },
+
+  // {
+  //   img: Yi_Hui_Christine_Huang,
+  //   userInfo: "Prof. Yi-Hui Christine HUANG (CityU)",
+  //   description: "介绍",
+  // },
+
   
 ];
 const teamList2 = [
