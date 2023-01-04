@@ -16,24 +16,43 @@
       </div>
       <div class="footer-box-2">
         <p class="title-wrap-footer">QUICk Links</p>
-        <p class="link-1">History</p>
-        <p class="link-1">Partners</p>
-        <p class="link-1">Cohorts</p>
-        <p class="link-1">Scientific Impact</p>
-        <p class="link-1">Events</p>
+        <p class="link-1" @click="goPage('1')">TEAM</p>
+        <p class="link-1" @click="goPage('2')">PARTNERS</p>
+        <p class="link-1" @click="goPage('3')">RELATED PROJECTS</p>
+        <p class="link-1" @click="goPage('4')">SCIENTFIC IMPACT</p>
+        <p class="link-1" @click="goPage('5')">NEWS & EVENTS</p>
       </div>
       <div class="footer-box-3">
         <p class="title-wrap-footer">How do we work</p>
-        <p class="link-1">ROADMAP</p>
-        <p class="link-1">SUB PROJECTS</p>
-        <p class="link-1">DELIVERABLES</p>
+        <p class="link-1" @click="goPage('6')">ROADMAP</p>
+        <p class="link-1" @click="goPage('7')">SUB PROJECTS</p>
+        <p class="link-1" @click="goPage('8')">DELIVERABLES</p>
       </div>
       <div class="footer-box-4"></div>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { useRoute, useRouter } from "vue-router";
+const router = useRouter();
+const route = useRoute();
+const goPage = (params) => {
+  const pathMap = {
+    1: "/team",
+    2: "/partners",
+    3: "/relatedProjects",
+    4: "/scientficImpact",
+    5: "/newsEvents",
+    6: "/roadmap",
+    7: "/subProjects",
+    8: "/deliverables",
+  };
+  router.push({
+    path: pathMap[params],
+  });
+};
+</script>
 
 <style lang="scss">
 .footer-wrap {
@@ -59,7 +78,7 @@
         font-size: 13px;
         line-height: 1.5;
         width: 280px;
-        .item-1{
+        .item-1 {
           display: inline-block;
           width: 36px;
           height: 36px;
@@ -73,11 +92,11 @@
           cursor: pointer;
           border-radius: 50%;
           border: 1px solid #222;
-          &:hover{
+          &:hover {
             // background-color: #55acee;
           }
         }
-        .item-2{
+        .item-2 {
           display: inline-block;
           width: 36px;
           height: 36px;
@@ -86,14 +105,14 @@
           background-color: #fff;
           cursor: pointer;
           border-radius: 60%;
-          border: 1px solid rgba(29,27,27,.75);
+          border: 1px solid rgba(29, 27, 27, 0.75);
           margin-left: 10px;
           vertical-align: middle;
-          &:hover{
+          &:hover {
             // background-color: #55acee;
           }
         }
-        .item-3{
+        .item-3 {
           display: inline-block;
           width: 36px;
           height: 36px;
@@ -105,7 +124,7 @@
           cursor: pointer;
           border-radius: 50%;
           border: 1px solid #222;
-          &:hover{
+          &:hover {
             // background-color: #55acee;
           }
         }
@@ -132,7 +151,7 @@
       }
     }
     .footer-box-4 {
-    //   flex: 3;
+      //   flex: 3;
     }
     .title-wrap-footer {
       color: #0f6fb8;

@@ -3,13 +3,13 @@
     <header class="header-box">
       <p class="title-page">{{ topic }}</p>
     </header>
-    <main class="main-box">newsEvents</main>
+    <main class="main-box">NEWS & EVENTS</main>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
-let topic = ref("Technical work packages");
+let topic = ref("NEWS & EVENTS");
 </script>
 
 <style lang="scss">

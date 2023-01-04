@@ -14,23 +14,31 @@
         <Article></Article>
       </section>
       <section class="section-right">
-        <p class="title">Upcoming Events</p>
+        <p class="title">
+          <span class="left-label">Upcoming Events</span>
+          <span class="right-label">See all upcoming events</span>
+        </p>
         <div class="work-shop">
-          <div class="left">
-            <img
-              src="@/assets/federated_analysis.jpg"
-              alt=""
-              class="left-img"
-            />
+          <div class="left-date">
+            <span class="number-data">18</span>
+            <span class="month-data">Jan</span>
           </div>
           <div class="right">
-            <p class="title-top">Federated data analysis workshop</p>
-            <p class="desc-1">Feb 26, 2023</p>
-            <p class="desc-1">CTICC, Cape Town, South Africa</p>
+            <p class="title-top">
+              (De)coding AI: Examining the political and environmental impact of
+              the lifecycle of algorithms
+            </p>
+            <p class="desc-1">10:00 -18:00, Hybrid</p>
+            <p class="desc-2">With Dr Ana Valdivia</p>
+            <p class="desc-3">
+              This workshop will explore the interactions and controversies of
+              algorithms beyond the code.
+            </p>
+            <p class="desc-4">Learn more & Book</p>
           </div>
         </div>
-        <p class="title-2">Past Webinars</p>
-        <Webinars></Webinars>
+        <!-- <p class="title-2">Past Webinars</p>
+        <Webinars></Webinars> -->
       </section>
     </main>
     <div class="line-wrap"></div>
@@ -104,34 +112,93 @@ let imgList = ref([
       }
     }
     .section-right {
-      flex: 1;
-      padding-left: 20px;
+      margin-top: 60px;
       .title {
-        font-size: 30px;
-        line-height: 1.5;
-        color: #4a4a4a;
-        padding: 17px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        align-items: center;
+        .left-label {
+          font-size: 30px;
+          line-height: 1.5;
+          color: #4a4a4a;
+          font-weight: 600;
+        }
+        .right-label {
+          cursor: pointer;
+        }
       }
       .work-shop {
-        padding: 17px;
-        display: flex;
-        .left {
-          margin-right: 20px;
-          .left-img {
-            height: 77px;
+        height: 300px;
+        position: relative;
+        background-color: #b7d4e6;
+        overflow: hidden;
+        .left-date {
+          width: 180px;
+          height: 180px;
+          border-radius: 50%;
+          background: #49b4f7;
+          position: absolute;
+          left: -30px;
+          top: -40px;
+          .number-data {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            font-size: 60px;
+            line-height: 1.5;
+            color: #fff;
+            font-weight: 700;
+          }
+          .month-data {
+            position: absolute;
+            font-size: 30px;
+            line-height: 1.5;
+            color: #fff;
+            font-weight: 700;
+            top: 105px;
+            right: 50px;
           }
         }
         .right {
-          flex: 1;
+          margin-left: 200px;
+          margin-top: 20px;
+          margin-right: 40px;
           .title-top {
-            font-size: 30px;
+            font-size: 20px;
             line-height: 1.5;
             color: #222;
           }
           .desc-1 {
-            font-size: 13px;
+            font-size: 16px;
             line-height: 1.5;
             color: #222;
+            margin: 20px 0;
+            font-style: italic;
+          }
+          .desc-2 {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #222;
+            margin: 20px 0;
+          }
+          .desc-3 {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #222;
+            margin: 20px 0;
+          }
+          .desc-4 {
+            display: inline-block;
+            font-size: 14px;
+            line-height: 1.5;
+            padding: 8px 30px;
+            border-radius: 20px;
+            color: #fff;
+            font-weight: 600;
+            background: blue;
+            cursor: pointer;
+            margin: 20px 0;
           }
         }
       }
