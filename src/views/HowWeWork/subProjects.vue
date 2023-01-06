@@ -5,65 +5,37 @@
     </header>
     <main class="main-box">
       <p class="text-1">
-        The <span class="weight">BRIDGE</span> project, through six sub-projects
+        The <span class="weight">BRIDGE project</span>, through six sub-projects
         (SP), draws on diverse methodological strengths, including interviews
         and focus groups, surveys, experiments, big data analytics, and
         econometrics, to construct a cross-disciplinary and multi-level
         framework to bridge existing social divides in Hong Kong and cultivate
         resilience.
       </p>
-      <p class="text-2">
-        <span class="underline">SP #1 (Hong Kong Social Pulse Database)</span>
-        provide a timely foundation for other SPs. SP#1 identifies
-        dilemma-preference gaps among different stakeholders via longitudinal
-        analysis of policies and public opinion represented in news, social
-        media,search and mobility data. By analyzing the divergent public
-        interest as well as the gap between public policy and public preference,
-        SP#1 identify the gaps between different stakeholders and provide
-        support for the
-        <span class="weight"> Gap Management Model </span>.
-      </p>
-      <p class="picture-box"></p>
-      <p class="text-3">
-        SP#2 (Tracking Individuals’ Resilience Building Survey) provides
-        population-representative evidence on policy compliance, individual
-        resilience. This sub-project adopts a process perspective and aims to
-        unfold the stages of an underlying resilience- building mechanism.This
-        project will focus on the syndemic aspects revealed in SP#1. Its
-        findings will identify the critical factors influencing the public’s
-        policy compliance and institutional trust, which will serve as
-        guidelines for designing interview protocols for the qualitative
-        investigation in SP5 and experimental design in SP6.
-      </p>
-      <p class="text-3">
-        SP#3 (Social Distrust, Expatriate Emigration, and Economic Resilience)
-        complements other sub-projects by focusing on hard-to-survey
-        demographics, notably skilled expatriates. It explicitly measures
-        expatriate emigration with quantitative rental transaction data, thus
-        filling the gap between the surveyable demographic and the overall
-        population.
-      </p>
-      <p class="text-3">
-        SP#4 (Digital Health and Social Disparities – A Trend Survey) provides
-        population-representative evidence on digital health adoption (SP #4).
-        Together with SP2 and 3, these projects construct three
-        resilience-building pathways, and inform the potential solutions and
-        tools for resilience buildings in SP#5 &6.
-      </p>
-      <p class="text-3">
-        SP#5 (Guidelines for Balanced Communication and Decision Making) builds
-        on notable patterns and gaps identified from the quantitative finding in
-        other SPs to solicit qualitative data from stakeholders. SP#5 will
-        inform the longitudinal survey design (SP #2 & SP #4) as well as the
-        experimental design (SP #6) and provide more grounded, nuanced, and
-        contextualized interpretations of the quantitative findings.
-      </p>
-      <p class="text-3">
-        SP#6 (Experimental Investigations on Communication Strategies) offers
-        solutions from a communication perspective for building a more resilient
-        society. It will inform the design for the other sub-projects. It will
-        also produce communication strategies and protocos for practical uses.
-      </p>
+      <div class="box-1">
+        <div class="section" v-for="(item, index) in list1" :key="index">
+          <p class="bgd">
+            <img :src="item.imgSrc" alt="" class="bgd-img" />
+          </p>
+          <p class="title-box">
+            {{ item.title }}
+          </p>
+          <p class="content" v-html="item.content"></p>
+          <p class="read-more">VIEW PROJECT</p>
+        </div>
+      </div>
+      <div class="box-1">
+        <div class="section" v-for="(item, index) in list2" :key="index">
+          <p class="bgd">
+            <img :src="item.imgSrc" alt="" class="bgd-img" />
+          </p>
+          <p class="title-box">
+            {{ item.title }}
+          </p>
+          <p class="content" v-html="item.content"></p>
+          <p class="read-more">VIEW PROJECT</p>
+        </div>
+      </div>
     </main>
   </div>
 </template>
@@ -71,6 +43,61 @@
 <script setup>
 import { ref } from "vue";
 let topic = ref("Sub-projects");
+import img1 from "@/assets/subProjects/sub-pro-01.png";
+import img2 from "@/assets/subProjects/sub-pro-02.png";
+import img3 from "@/assets/subProjects/sub-pro-03.png";
+import img4 from "@/assets/subProjects/sub-pro-04.png";
+import img5 from "@/assets/subProjects/sub-pro-05.png";
+import img6 from "@/assets/subProjects/sub-pro-06.png";
+const list1 = ref([
+  {
+    imgSrc: img1,
+    title: "Mapping the Social Pulse During and After the Pandemic (SP #1)",
+    content:
+      "This project identifies dilemma-preference gaps among different stakeholders via longitudinal analysis of policies and public opinion represented in news, social media,search and mobility data. ",
+    link: "",
+  },
+  {
+    imgSrc: img2,
+    title:
+      "Tracking Individuals’ Resilience Building via a Trust-Based Mechanism (SP#2)",
+    content:
+      "This project provides population-representative evidence on policy compliance, individual resilience. It adopts a process perspective and aims to unfold the stages of an underlying resilience- building mechanism. ",
+    link: "",
+  },
+  {
+    imgSrc: img3,
+    title:
+      "Social Distrust, Expatriate Emigration, and Economic Resilience  (SP#3)",
+    content:
+      "This project complements other sub-projects by focusing on hard-to-survey demographics, notably skilled expatriates. It explicitly measures expatriate emigration with quantitative rental transaction data.",
+    link: "",
+  },
+]);
+const list2 = ref([
+  {
+    imgSrc: img4,
+    title: "A Trend Survey of Digital Health and Social Disparities (SP#4)",
+    content:
+      "Parallel to and complement with SP2 and SP3, this project addresses the issue of health and social disparity, and serves as another mechanism in “mechanism analysis phrase” the Gap Management Model.",
+    link: "",
+  },
+  {
+    imgSrc: img5,
+    title:
+      "Developing Guidelines for Balanced Communication and Decision Making (SP#5)",
+    content:
+      "With a qualitative approach to contextualize and complement other SP’s findings, this project seeks in-depth insights from individuals of various backgrounds and generate solutions for bridging the identified gaps.",
+    link: "",
+  },
+  {
+    imgSrc: img6,
+    title: "Experimental Investigations on Communication Strategies (SP#6)",
+    content:
+      "This project offers solutions from a communication perspective for building a more resilient society. It will inform the design for the other sub-projects. It will also produce communication strategies and protocos for practical uses.",
+    link: "",
+  },
+]);
 </script>
 
 <style lang="scss">
@@ -96,30 +123,71 @@ let topic = ref("Sub-projects");
   .main-box {
     width: 1200px;
     margin: 0 auto;
-    padding: 90px 30px;
-    .weight{
-        font-weight: 600;
-      }
-    .text-1{
+    padding: 90px 0px;
+    .weight {
+      font-weight: 600;
+    }
+    .text-1 {
       margin-bottom: 30px;
-      .weight{
+      .weight {
         font-weight: 600;
       }
-      .underline{
-       text-decoration: underline;
+      .underline {
+        text-decoration: underline;
       }
     }
-    .text-2{
-      margin-bottom: 30px;s
-      .weight{
-        font-weight: 600;
-      }
-      .underline{
-       text-decoration: underline;
-      }
-    }
-    .text-3{
+    .box-1 {
+      display: flex;
+      justify-content: space-between;
       margin-bottom: 30px;
+    }
+    .section {
+      width: 275px;
+      background: rgb(167, 219, 251);
+      height: 600px;
+      position: relative;
+      &:nth-child(2) {
+        .title-box {
+        }
+      }
+      .bgd {
+        width: 275px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .bgd-img {
+          width: 100%;
+        }
+      }
+      .title-box {
+        color: #000;
+        font-size: 20px;
+        line-height: 1.5;
+        font-weight: 600;
+        margin: 25px 0 25px;
+        padding: 0 20px;
+      }
+      .content {
+        color: #222;
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0 0 25px;
+        padding: 0 20px;
+      }
+      .read-more {
+        position: absolute;
+        font-size: 14px;
+        line-height: 1.5;
+        bottom: 20px;
+        margin-left: 25px;
+        display: inline-block;
+        padding: 8px 30px;
+        border-radius: 20px;
+        color: #222;
+        font-weight: 600;
+        background: rgb(67, 160, 234);
+        cursor: pointer;
+      }
     }
   }
 }

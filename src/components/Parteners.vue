@@ -1,101 +1,114 @@
+<!--
+ * @Author: yanbao dong
+ * @Date: 2023-01-04 21:30:47
+ * @LastEditors: yanbao dong
+ * @LastEditTime: 2023-01-06 11:05:21
+ * @Description: file content
+-->
 <template>
-  
   <div class="carousel-box">
     <p class="title-par">Our Partners</p>
     <div class="box-list">
       <div class="box-item">
-        <img @click="toPage('https://www.cityu.edu.hk/')" src="@/assets/partner-4.png" alt="" class="img-1 img-partner">
-        <br/>
-        <p @click="toPage('https://www.cityu.edu.hk/')">https://www.cityu.edu.hk/</p>
+        <img
+          @click="toPage('https://www.cityu.edu.hk/')"
+          src="@/assets/partner-4.png"
+          alt=""
+          class="img-1 img-partner"
+        />
       </div>
-      
+
       <div class="box-item">
-        <img @click="toPage('https://www.cityu.edu.hk/class/')" src="@/assets/partner-5.png" alt="" class="img-2 img-partner">
-        <br/>
-        <p @click="toPage('https://www.cityu.edu.hk/class/')">https://www.cityu.edu.hk/class/</p>
-      </div>
-      <div class="box-item">
-        <img @click="toPage('https://www.cityu.edu.hk/com/')" src="@/assets/partner-6.png" alt="" class="img-3 img-partner">
-        <br/>
-        <p  @click="toPage('https://www.cityu.edu.hk/com/')">https://www.cityu.edu.hk/com/</p>
-      </div>
-      <div class="box-item">
-        <img @click="toPage('https://www.cityu.edu.hk/lamp/')" src="@/assets/partner-1.png" alt="" class="img-4 img-partner">
-        <br/>
-        <p @click="toPage('https://www.cityu.edu.hk/lamp/')">https://www.cityu.edu.hk/lamp/</p>
+        <img
+          @click="toPage('https://www.cityu.edu.hk/class/')"
+          src="@/assets/partner-5.png"
+          alt=""
+          class="img-2 img-partner"
+        />
       </div>
       <div class="box-item">
-        <img @click="toPage('http://www.cityu.edu.hk/cpal/')" src="@/assets/partner-2.png" alt="" class="img-5 img-partner">
-        <br/>
-        <p  @click="toPage('http://www.cityu.edu.hk/cpal/')">http://www.cityu.edu.hk/cpal/</p>
+        <img
+          @click="toPage('https://www.aecair.org/')"
+          src="@/assets/partner-3.png"
+          alt=""
+          class="img-6 img-partner"
+        />
       </div>
       <div class="box-item">
-        <img @click="toPage('https://www.aecair.org/')" src="@/assets/partner-3.png" alt="" class="img-6 img-partner">
-        <br/>
-        <p @click="toPage('https://www.aecair.org/')" >https://www.aecair.org/</p>
+        <img
+          @click="toPage('https://www.cityu.edu.hk/com/')"
+          src="@/assets/partner-6.png"
+          alt=""
+          class="img-3 img-partner"
+        />
+      </div>
+      <div class="box-item">
+        <img
+          @click="toPage('https://www.cityu.edu.hk/lamp/')"
+          src="@/assets/partner-1.png"
+          alt=""
+          class="img-4 img-partner"
+        />
+      </div>
+      <div class="box-item">
+        <img
+          @click="toPage('http://www.cityu.edu.hk/cpal/')"
+          src="@/assets/partner-2.png"
+          alt=""
+          class="img-5 img-partner"
+        />
       </div>
     </div>
   </div>
- 
 </template>
 <script setup>
-const toPage = (url)=>{
-  window.open(url)
-}
+const toPage = (url) => {
+  window.open(url);
+};
 </script>
 <style lang="scss">
-.carousel-box{
+.carousel-box {
   width: 1200px;
-    margin: 40px auto; 
-  .title-par{
-    text-align: center;
+  margin: 40px auto;
+  .title-par {
     font-size: 30px;
     line-height: 1.5;
-    color: #c11524;
+    color: #4a4a4a;
+    font-weight: 600;
+    margin-bottom: 25px;
   }
-  .box-list{
-    margin-top: 100px;
+  .box-list {
+    margin-top: 60px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    .box-item{
-      width: 33.33%;
+    justify-content: space-between;
+    align-items: center;
+    .box-item {
       margin-bottom: 40px;
       text-align: center;
-      img{
-        height: 150px;
+      img {
+        width: 150px;
         cursor: pointer;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
       }
-      .img-1{
-
+      .img-1 {
+        // width: 400px;
       }
-      .img-2{
-        height: auto;
-        width: 300px;
-        margin-bottom: 80px;
+      .img-2 {
+        // width: 600px;
       }
-      .img-3{
-        height: auto;
-        width: 300px;
-        margin-bottom: 80px;
+      .img-3 {
+        // width: 600px;
       }
-      .img-4{
-        height: auto;
-        width: 300px;
-        margin-bottom: 80px;
+      .img-4 {
+        // width: 600px;
       }
-      .img-5{
-        height: auto;
-        width: 300px;
-        margin-bottom: 50px;
+      .img-5 {
+        // width: 600px;
       }
-      .img-6{
-        height: auto;
-        width: 200px;
-        margin-bottom: 15px;
+      .img-6 {
+        // width: 500px;
       }
-      p{
+      p {
         cursor: pointer;
         color: #222;
         font-size: 14px;

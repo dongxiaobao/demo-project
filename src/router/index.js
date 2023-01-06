@@ -1,3 +1,10 @@
+/*
+ * @Author: yanbao dong
+ * @Date: 2023-01-04 21:30:47
+ * @LastEditors: yanbao dong
+ * @LastEditTime: 2023-01-06 10:09:29
+ * @Description: file content
+ */
 import { createRouter, createWebHashHistory } from "vue-router";
 
 import home from "./home.js";
@@ -5,8 +12,9 @@ import bridge from "./bridge";
 import dissmination from "./dissmination";
 import howWeWork from "./howWeWork";
 import impact from "./impact";
+import other from './other'
 
-const routes = [...home, ...bridge, ...dissmination, ...howWeWork, ...impact];
+const routes = [...home, ...bridge, ...dissmination, ...howWeWork, ...impact,...other];
 
 const router = createRouter({
   history: createWebHashHistory(),

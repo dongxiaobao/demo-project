@@ -10,7 +10,7 @@
     <!-- 文字内容区域 -->
     <main class="mian">
       <section class="section-left">
-        <p class="title">Latest from Bridge</p>
+        <p class="title">Pathways to Impact</p>
         <Article></Article>
       </section>
       <section class="section-right">
@@ -49,14 +49,13 @@
 
 <script setup>
 import Article from "@/components/Article.vue";
-import Webinars from "@/components/Webinars.vue";
 import Parteners from "@/components/Parteners.vue";
 import { ElCarousel, ElCarouselItem } from "element-plus";
 import "element-plus/es/components/carousel/style/css";
 import "element-plus/es/components/carousel-item/style/css";
 import { ref } from "vue";
-import pic01 from "@/assets/pic-01.png";
-import pic02 from "@/assets/pic-02.png";
+import pic01 from "@/assets/pic-01.jpeg";
+import pic02 from "@/assets/pic-02.jpeg";
 import pic03 from "@/assets/pic-03.png";
 let imgList = ref([
   {
@@ -77,11 +76,11 @@ let imgList = ref([
 .el-carousel__container {
   width: 1400px;
   margin: 0 auto;
-  height: 610px;
+  height: 810px;
 }
 .el-carousel__item {
   .pic-class {
-    height: 600px;
+    height: 800px;
   }
 }
 
@@ -90,7 +89,7 @@ let imgList = ref([
   text-align: left;
   .header {
     width: 100%;
-    height: 639px;
+    height: 839px;
     background-color: #fff;
     text-align: center;
     border: 1px solid #fff;
@@ -131,7 +130,7 @@ let imgList = ref([
       .work-shop {
         height: 300px;
         position: relative;
-        background-color: #b7d4e6;
+       background: rgb(167,219,251);
         overflow: hidden;
         .left-date {
           width: 180px;
@@ -194,9 +193,9 @@ let imgList = ref([
             line-height: 1.5;
             padding: 8px 30px;
             border-radius: 20px;
-            color: #fff;
+             color: #222;
             font-weight: 600;
-            background: blue;
+            background: rgb(67,160,234);
             cursor: pointer;
             margin: 20px 0;
           }

@@ -91,7 +91,7 @@ const props = defineProps({
       margin-top: 40px;
       text-align: center;
       .page-img {
-        width: 600px;
+        width: 100%;
       }
     }
     .details-box {

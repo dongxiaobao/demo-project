@@ -158,13 +158,13 @@ const toPage = (index) => {
       }
       .text-title {
         margin-left: 20px;
-        border-left: #d45d68 1px solid;
+        border-left: #5db4f7 1px solid;
         text-align: left;
         word-break: break-all !important;
         width: 210px;
         font-size: 17px;
         line-height: 28px;
-        color: #d45d68;
+        color: #5db4f7;
         height: 88px;
         padding-left: 7px;
       }
@@ -174,7 +174,7 @@ const toPage = (index) => {
       height: 55px;
     }
     .el-menu-item {
-      color: #49b4f7;
+      // color: #49b4f7;
       &.is-active {
         border-bottom: none;
       }

@@ -4,82 +4,85 @@
       <p class="title-page">{{ topic }}</p>
     </header>
     <main class="main-box">
-     <section class="list-box" v-for="(item,index) in list" :key="index">
-    
-    <p class="title">{{ item.title }}</p>
-    <div class="child-box" v-for="(child,childIndex) in item.contentList" :key="childIndex">
-    <p class="option-item">{{ child.item }}</p>
-    </div>
-    </section>
-
+      <section class="list-box" v-for="(item, index) in list" :key="index">
+        <p class="title">{{ item.title }}</p>
+        <div
+          class="child-box"
+          v-for="(child, childIndex) in item.contentList"
+          :key="childIndex"
+        >
+          <p class="option-item">{{ child.item }}</p>
+        </div>
+      </section>
     </main>
   </div>
 </template>
 
 <script setup>
-import {ref} from 'vue'
-let topic = ref('Technical work packages')
-const list = ref(
-  [
-    {
-      title:'D1. BRIDGE Databases',
-      contentList:[
-        {
-          item:'a. Hong Kong Social Pulse Database ',
-
-        },
-        {
-          item:'b. Trust and Resilience Survey Database '
-        },
-        {
-          item:'c. Digital Health Trend Survey Database '
-        }
-      ]
-    },
-    {
-      title:'D2. Annual BRIDGE Reports',
-      contentList:[
-        {
-          item:'a. Hong Kong Social Pulse Report & Social Signal Model of Pandemic Resilience'
-        },
-        {
-          item:'b. Trust and Resilience Index Report'
-        },
-        {
-          item:'c. Technical Report on Hong Kong Expatriate Emigration & Global Talent Search Program'
-        },
-        {
-          item:'d. Hong Kong Digital Health Trend Survey Report'
-        },
-        {
-          item:'e. Interview Report on Opinion and Dilemma Preference Gaps among the public, government, and other stakeholders '
-        },
-      ]
-    },
-    {
-      title:'D3. Hong Kong e-Health Blueprint',
-      contentList:[]
-    },
-    {
-      title:'D4. Risk Policy Inventory and Customized Policy Guidelines',
-      contentList:[]
-    },
-    {
-      title:'D5. Risk Communication Strategy Guidelines and Communication Intervention Protocols',
-      contentList:[]
-    },{
-      title:'D6. Series of Public Workshops, Seminars, News Releases, and Media Coverages and PhD graduations',
-      contentList:[]
-    },{
-      title:'D7. Series of Academic Papers in Journals and Conference',
-      contentList:[]
-    }
-  ]
-)
+import { ref } from "vue";
+let topic = ref("Deliverables");
+const list = ref([
+  {
+    title: "D1. BRIDGE Databases",
+    contentList: [
+      {
+        item: "a. Hong Kong Social Pulse Database ",
+      },
+      {
+        item: "b. Trust and Resilience Survey Database ",
+      },
+      {
+        item: "c. Digital Health Trend Survey Database ",
+      },
+    ],
+  },
+  {
+    title: "D2. Annual BRIDGE Reports",
+    contentList: [
+      {
+        item: "a. Hong Kong Social Pulse Report & Social Signal Model of Pandemic Resilience",
+      },
+      {
+        item: "b. Trust and Resilience Index Report",
+      },
+      {
+        item: "c. Technical Report on Hong Kong Expatriate Emigration & Global Talent Search Program",
+      },
+      {
+        item: "d. Hong Kong Digital Health Trend Survey Report",
+      },
+      {
+        item: "e. Interview Report on Opinion and Dilemma Preference Gaps among the public, government, and other stakeholders ",
+      },
+    ],
+  },
+  {
+    title: "D3. Hong Kong e-Health Blueprint",
+    contentList: [],
+  },
+  {
+    title: "D4. Risk Policy Inventory and Customized Policy Guidelines",
+    contentList: [],
+  },
+  {
+    title:
+      "D5. Risk Communication Strategy Guidelines and Communication Intervention Protocols",
+    contentList: [],
+  },
+  {
+    title:
+      "D6. Series of Public Workshops, Seminars, News Releases, and Media Coverages and PhD graduations",
+    contentList: [],
+  },
+  {
+    title: "D7. Series of Academic Papers in Journals and Conference",
+    contentList: [],
+  },
+]);
 </script>
 
 <style lang="scss">
-.deliverables{
+.deliverables {
   min-width: 1200px;
   text-align: left;
   .header-box {
@@ -98,24 +101,24 @@ const list = ref(
       font-weight: 600;
     }
   }
-  .main-box{
+  .main-box {
     width: 1200px;
     margin: 0 auto;
     padding: 90px 30px;
-    .list-box{
+    .list-box {
       margin-bottom: 30px;
-      .title{
-      font-size: 16px;
-      line-height: 1.5;
-      margin-bottom: 10px;
-      color: #222;
-      font-weight: 600;
+      .title {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+        color: #222;
+        font-weight: 600;
       }
-      .child-box{
-        .option-item{
+      .child-box {
+        .option-item {
           font-size: 16px;
-      line-height: 1.5;
-      color: #222;
+          line-height: 1.5;
+          color: #222;
         }
       }
     }
