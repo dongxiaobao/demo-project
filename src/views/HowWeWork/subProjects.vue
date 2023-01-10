@@ -21,7 +21,7 @@
             {{ item.title }}
           </p>
           <p class="content" v-html="item.content"></p>
-          <p class="read-more">VIEW PROJECT</p>
+          <p class="read-more" @click="toPageMore">VIEW PROJECT</p>
         </div>
       </div>
       <div class="box-1">
@@ -33,7 +33,7 @@
             {{ item.title }}
           </p>
           <p class="content" v-html="item.content"></p>
-          <p class="read-more">VIEW PROJECT</p>
+          <p class="read-more" @click="toPageMore">VIEW PROJECT</p>
         </div>
       </div>
     </main>
@@ -98,12 +98,22 @@ const list2 = ref([
     link: "",
   },
 ]);
+import { useRoute, useRouter } from "vue-router";
+const router = useRouter();
+const route = useRoute();
+const toPageMore = () => {
+  // debugger
+  router.push({
+    path: "/subProject/SP1",
+  });
+};
 </script>
 
 <style lang="scss">
 .subProjects {
   min-width: 1200px;
   text-align: left;
+  line-height: 1.5;
   .header-box {
     height: 144px;
     width: 100%;
@@ -129,6 +139,8 @@ const list2 = ref([
     }
     .text-1 {
       margin-bottom: 30px;
+      font-size: 20px;
+      line-height: 1.5;
       .weight {
         font-weight: 600;
       }
@@ -142,7 +154,7 @@ const list2 = ref([
       margin-bottom: 30px;
     }
     .section {
-      width: 275px;
+      width: 300px;
       background: rgb(167, 219, 251);
       height: 600px;
       position: relative;
@@ -151,12 +163,14 @@ const list2 = ref([
         }
       }
       .bgd {
-        width: 275px;
+        width: 300px;
+
         display: flex;
         align-items: center;
         justify-content: center;
         .bgd-img {
           width: 100%;
+          height: 200px;
         }
       }
       .title-box {

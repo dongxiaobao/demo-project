@@ -172,7 +172,7 @@ userList1.value = teamList1;
         }
         .description {
           text-align: left;
-          padding-left: 200px;
+          padding-left: 190px;
         }
       }
       &:nth-child(6) {
@@ -182,7 +182,7 @@ userList1.value = teamList1;
         }
         .description {
           text-align: left;
-          padding-left: 200px;
+          padding-left: 190px;
         }
       }
       &:nth-child(9) {
@@ -192,7 +192,7 @@ userList1.value = teamList1;
         }
         .description {
           text-align: left;
-          padding-left: 200px;
+          padding-left: 190px;
         }
       }
       &:nth-child(5) {

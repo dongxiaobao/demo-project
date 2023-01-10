@@ -2,7 +2,7 @@
  * @Author: yanbao dong
  * @Date: 2023-01-06 09:48:42
  * @LastEditors: yanbao dong
- * @LastEditTime: 2023-01-06 10:31:01
+ * @LastEditTime: 2023-01-10 19:09:03
  * @Description: file content
 -->
 <template>
@@ -11,7 +11,7 @@
       <p class="title-page">{{ topic }}</p>
     </header>
     <main class="main-box">
-      <p class="text-1">
+      <p class="text-1 title">
         The pandemic's unprecedented scale paralyzed Hong Kong’s existing
         healthcare systems. At the height of the pandemic, Hong Kong has
         suffered from a salient medical resource shortage and unequal
@@ -21,8 +21,9 @@
         services. Such inequality can be conceptualized as a four-level digital
         divide, including digital access, literacy, impact, and representation.
       </p>
-      <p class="img-1">[插图]</p>
-      <p class="text-1">
+      <section class="content-box">
+        <div class="left-box">
+          <p class="text-1">
         Digital inequality has posed a significant barrier to resilience
         building. There is a strong need to uncover the digital health
         disparities in relation to social disparities and to support
@@ -31,6 +32,17 @@
         help individuals, communities, regulators, and stakeholders efficiently
         respond to future crises.
       </p>
+        </div>
+        <div class="right-box">
+         
+         <p class="img-1">
+        <img class="peitu" src="@/assets/pageImg/information.jpeg" alt="" />
+     
+      </p>
+        </div>
+      </section>
+     
+   
     </main>
   </div>
 </template>
@@ -44,6 +56,8 @@ let topic = ref("Information & Technology ");
 .informationAndTechnology {
   min-width: 1200px;
   text-align: left;
+  font-size: 20px;
+  line-height: 1.5;
   .header-box {
     height: 144px;
     width: 100%;
@@ -64,8 +78,15 @@ let topic = ref("Information & Technology ");
     width: 1200px;
     margin: 0 auto;
     padding: 90px 30px;
+      .title {
+     
+    }
     .img-1 {
       margin-bottom: 30px;
+      text-align: center;
+      .peitu {
+        height: 300px;
+      }
     }
     .weight {
       font-weight: 600;
@@ -80,6 +101,24 @@ let topic = ref("Information & Technology ");
       font-weight: 600;
       color: #222;
       margin-bottom: 30px;
+    }
+    .content-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 10px;
+      .left-box {
+        margin-right: 30px;
+        flex: 1;
+      }
+      .right-box {
+        // width: 300px;
+        .img-1 {
+          .peitu {
+            height: 250px;
+          }
+        }
+      }
     }
   }
 }

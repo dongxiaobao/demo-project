@@ -2,7 +2,7 @@
  * @Author: yanbao dong
  * @Date: 2023-01-02 19:19:22
  * @LastEditors: yanbao dong
- * @LastEditTime: 2023-01-06 10:10:24
+ * @LastEditTime: 2023-01-10 17:44:13
  * @Description: file content
 -->
 <template>
@@ -92,6 +92,7 @@ const readMore = (index)=>{
       font-size: 20px;
       line-height: 1.5;
       margin: 25px 5px 25px 25px;
+      font-weight: 600;
     }
     .content {
       color: #222;

@@ -2,7 +2,7 @@
  * @Author: yanbao dong
  * @Date: 2023-01-04 21:30:47
  * @LastEditors: yanbao dong
- * @LastEditTime: 2023-01-06 18:51:46
+ * @LastEditTime: 2023-01-10 19:14:24
  * @Description: file content
 -->
 <template>
@@ -120,13 +120,14 @@ const readMore = (link) => {
         font-weight: 600;
         margin: 25px 0 25px;
         padding: 0 20px;
+        height: 180px;
       }
       .content {
         color: #222;
         font-size: 14px;
         line-height: 1.5;
         margin: 0 0 25px;
-         padding: 0 20px;
+        padding: 0 20px;
       }
       .read-more {
         position: absolute;

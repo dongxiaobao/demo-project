@@ -6,12 +6,28 @@
     <main class="main-box">
       <section class="list-box" v-for="(item, index) in list" :key="index">
         <p class="title">{{ item.title }}</p>
-        <div
-          class="child-box"
-          v-for="(child, childIndex) in item.contentList"
-          :key="childIndex"
-        >
-          <p class="option-item">{{ child.item }}</p>
+        <div class="left-box" v-if="index==0">
+            <div
+              class="child-box"
+              v-for="(child, childIndex) in item.contentList"
+              :key="childIndex"
+            >
+              <p class="option-item">{{ child.item }}</p>
+            </div>
+          </div>
+        <div class="content-box" v-if="index == 1">
+          <div class="left-box">
+            <div
+              class="child-box"
+              v-for="(child, childIndex) in item.contentList"
+              :key="childIndex"
+            >
+              <p class="option-item">{{ child.item }}</p>
+            </div>
+          </div>
+          <div class="right-box">
+            <img class="right-img" src="@/assets/deliverable.jpeg" alt="" />
+          </div>
         </div>
       </section>
     </main>
@@ -85,6 +101,8 @@ const list = ref([
 .deliverables {
   min-width: 1200px;
   text-align: left;
+  line-height: 1.5;
+  font-size: 20px;
   .header-box {
     height: 144px;
     width: 100%;
@@ -108,7 +126,6 @@ const list = ref([
     .list-box {
       margin-bottom: 30px;
       .title {
-        font-size: 16px;
         line-height: 1.5;
         margin-bottom: 10px;
         color: #222;
@@ -116,9 +133,24 @@ const list = ref([
       }
       .child-box {
         .option-item {
-          font-size: 16px;
           line-height: 1.5;
           color: #222;
+        }
+      }
+      .content-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 10px;
+        .left-box {
+          margin-right: 30px;
+          flex: 1;
+        }
+        .right-box {
+          width: 350px;
+          .right-img {
+            width: 350px;
+          }
         }
       }
     }

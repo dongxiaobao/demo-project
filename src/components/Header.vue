@@ -11,7 +11,7 @@
         <img src="@/assets/logo.jpg" alt="" class="logo" />
         <span class="text-title">
           Building Resillience with<br />Information and Dialogues<br />for
-          Grouth and Equality
+          Growth and Equality
         </span>
       </el-menu-item>
       <div class="flex-grow" />
@@ -144,18 +144,15 @@ const toPage = (index) => {
 <style lang="scss">
 .header {
   min-width: 1200px;
-  height: 150px;
+  height: 120px;
   border-bottom: 1px solid #ddd;
-  // margin-top: 30px;
+
   .el-menu {
     width: 1200px;
     margin: 0 auto;
-    height: 150px;
+    height: 120px;
     .left-logo {
       padding-left: 0;
-      &:hover{
-        // background: none;
-      }
       .text-title {
         margin-left: 20px;
         border-left: #5db4f7 1px solid;
@@ -180,7 +177,7 @@ const toPage = (index) => {
       }
     }
     .title-name {
-      padding: 0 5px;
+      padding: 0 8px;
       height: 30px;
       margin: auto 0;
       font-size: 16px;
@@ -200,7 +197,7 @@ const toPage = (index) => {
     flex-grow: 1;
   }
   .search-box {
-    width: 50px;
+    width: 84px;
     padding-left: 20px;
     padding-top: 10px;
     .top-box {
@@ -246,7 +243,7 @@ const toPage = (index) => {
     }
     .center-box {
       height: 25px;
-      margin-top: 32px;
+      margin-top: 12px;
       display: flex;
       justify-content: space-between;
       align-items: center;

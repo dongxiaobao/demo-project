@@ -1,7 +1,7 @@
 <template>
   <div class="over-view">
     <header class="header">
-      <el-carousel indicator-position="outside">
+      <el-carousel indicator-position="outside" autoplay :pause-on-hover='false'>
         <el-carousel-item v-for="(item, index) in imgList" :key="index">
           <img :src="item.imgSrc" alt="" class="pic-class" />
         </el-carousel-item>
@@ -83,7 +83,6 @@ let imgList = ref([
     height: 800px;
   }
 }
-
 .over-view {
   min-width: 1200px;
   text-align: left;

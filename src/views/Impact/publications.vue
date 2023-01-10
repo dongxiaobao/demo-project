@@ -357,6 +357,8 @@ let topic = ref("PUBLICATIONS");
 .publications {
   min-width: 1200px;
   text-align: left;
+  line-height: 1.5;
+  font-size: 16px;
   .header-box {
     height: 144px;
     width: 100%;
@@ -378,6 +380,12 @@ let topic = ref("PUBLICATIONS");
     margin: 0 auto;
     padding: 90px 30px;
     .user-item {
+      .tab-1 {
+        font-size: 22px;
+        font-weight: 600;
+        color: #222;
+        margin-bottom: 30px;
+      }
       .text-1 {
         margin-bottom: 30px;
         .blue {
