@@ -5,7 +5,7 @@
     </header>
     <main class="main-box">
       <section class="user-item">
-        <p class="tab-1">[SP#1]</p>
+        <p class="tab-1">[SP1]</p>
         <p class="text-1">
           Zhou, J., Zhang, Q. (joint first author). , Zhou, S.*. , Li, X.*. &
           Zhang, M. (in press). Unintended Emotional Effects of Online Health
@@ -96,7 +96,7 @@
         </p>
       </section>
       <section class="user-item">
-        <p class="tab-1">[SP#2]</p>
+        <p class="tab-1">[SP2]</p>
         <p class="text-1">
           Huang, Y. H. C., Sun, J., Liu, R., Lau, J., & Cai, Q. (2022).
           Country/Region Level Pandemic Severity Moderates the Relationships
@@ -144,7 +144,7 @@
         </p>
       </section>
       <section class="user-item">
-        <p class="tab-1">[SP#3]</p>
+        <p class="tab-1">[SP3]</p>
         <p class="text-1">
           Huang, S., Lin, T. C., & Xiang, H. (2021). Psychological barrier and
           cross-firm return predictability. Journal of Financial Economics,
@@ -182,7 +182,7 @@
         </p>
       </section>
       <section class="user-item">
-        <p class="tab-1">[SP#4]</p>
+        <p class="tab-1">[SP4]</p>
         <p class="text-1">
           Lin, F.*, Chen, X., & Cheng, E. W. (2022). Contextualized impacts of
           an infodemic on vaccine hesitancy: The moderating role of
@@ -251,7 +251,7 @@
         </p>
       </section>
       <section class="user-item">
-        <p class="tab-1">[SP#5]</p>
+        <p class="tab-1">[SP5]</p>
         <p class="text-1">
           Kumar, D., Ison, M. G., Mira, J. P., Welte, T., Ha, J. H., Hui, D. S.,
           ... & Lee, N. (2022). Combining baloxavir marboxil with
@@ -307,7 +307,7 @@
         </p>
       </section>
       <section class="user-item">
-        <p class="tab-1">[SP#6]</p>
+        <p class="tab-1">[SP6]</p>
         <p class="text-1">
           Shi, J. & Dai. Y.* (in press). Audience–campaign planner interaction
           in social media communication campaigns: How it influences intended

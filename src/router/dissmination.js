@@ -1,14 +1,14 @@
-const newsEvents = () => import("@/views/Dissmination/newsEvents.vue");
+
 const socialMedia = () => import("@/views/Dissmination/socialMedia.vue");
 const webinars = () => import("@/views/Dissmination/webinars.vue");
-
+const publications = () => import("@/views/Impact/publications.vue");
 const dissmination = [
   {
-    path: "/newsEvents",
-    name: "newsEvents",
-    component: newsEvents,
+    path: "/publications",
+    name: "publications",
+    component: publications,
     meta: {
-      title: "Dissmination",
+      title: "publications",
       keepAlive: true,
     },
   },

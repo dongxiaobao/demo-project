@@ -12,7 +12,7 @@
           class="hoster-img"
         />
         <p class="text-user-info">Yi-Hui Christine HUANG (CityU)</p>
-        <p class="description">Chair Professor of Media and Communication</p>
+        <p class="description">Chair Professor of Communication and Media</p>
       </section>
       <p class="box-1">Co-Principal Investigator</p>
       <section class="section">

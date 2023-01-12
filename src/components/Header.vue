@@ -30,14 +30,15 @@
       </el-sub-menu>
       <el-sub-menu index="4" class="title-name">
         <template #title>DISSEMINATION</template>
-        <el-menu-item index="4-1">NEWS & EVENTS</el-menu-item>
+        <el-menu-item index="4-1">PUBLICATIONS</el-menu-item>
         <el-menu-item index="4-2">WEBINARS</el-menu-item>
         <el-menu-item index="4-3">SOCIAL MEDIA</el-menu-item>
       </el-sub-menu>
       <el-sub-menu index="5" class="title-name">
         <template #title>IMPACT</template>
-        <el-menu-item index="5-1">SCIENTFIC IMPACT</el-menu-item>
-        <el-menu-item index="5-2">PUBLICATIONS</el-menu-item>
+        <el-menu-item index="5-1"> NEWS & EVENTS </el-menu-item>
+        <el-menu-item index="5-2">SCIENTFIC IMPACT</el-menu-item>
+
         <el-menu-item index="5-3">DATABSETS</el-menu-item>
       </el-sub-menu>
       <div class="search-box">
@@ -106,7 +107,7 @@ const handleSelect = (key, keyPath) => {
     });
   } else if (key == "4-1") {
     router.push({
-      path: "/newsEvents",
+      path: "/publications",
     });
   } else if (key == "4-2") {
     router.push({
@@ -118,15 +119,15 @@ const handleSelect = (key, keyPath) => {
     });
   } else if (key == "5-1") {
     router.push({
-      path: "/scientficImpact",
+      path: "/newsEvents",
     });
   } else if (key == "5-2") {
     router.push({
-      path: "/publications",
+      path: "/scientificImpact",
     });
   } else if (key == "5-3") {
     router.push({
-      path: "/databsets",
+      path: "/datasets",
     });
   }
 };

@@ -1,32 +1,33 @@
-const databsets = () => import("@/views/Impact/databsets.vue");
-const publications = () => import("@/views/Impact/publications.vue");
-const scientficImpact = () => import("@/views/Impact/scientficImpact.vue");
+const datasets = () => import("@/views/Impact/datasets.vue");
+const newsEvents = () => import("@/views/Dissmination/newsEvents.vue");
+const scientificImpact = () => import("@/views/Impact/scientificImpact.vue");
 
 const impact = [
   {
-    path: "/databsets",
-    name: "databsets",
-    component: databsets,
+    path: "/datasets",
+    name: "datasets",
+    component: datasets,
     meta: {
       title: "Impact",
       keepAlive: true,
     },
   },
+
   {
-    path: "/publications",
-    name: "publications",
-    component: publications,
+    path: "/newsEvents",
+    name: "newsEvents",
+    component: newsEvents,
     meta: {
-      title: "publications",
+      title: "Dissmination",
       keepAlive: true,
     },
   },
   {
-    path: "/scientficImpact",
-    name: "scientficImpact",
-    component: scientficImpact,
+    path: "/scientificImpact",
+    name: "scientificImpact",
+    component: scientificImpact,
     meta: {
-      title: "scientficImpact",
+      title: "scientificImpact",
       keepAlive: true,
     },
   },

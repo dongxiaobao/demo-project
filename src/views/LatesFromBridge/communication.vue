@@ -6,7 +6,7 @@
  * @Description: file content
 -->
 <template>
-  <div class="databsets">
+  <div class="datasets">
     <header class="header-box">
       <p class="title-page">{{ topic }}</p>
     </header>
@@ -57,7 +57,7 @@ let topic = ref("Communication");
 </script>
 
 <style lang="scss">
-.databsets {
+.datasets {
   min-width: 1200px;
   text-align: left;
   font-size: 20px;

@@ -5,7 +5,7 @@
         <p class="title-wrap-footer">Get In Touch</p>
         <p class="contact-1">
           Email:
-          <a href="mailto:info@cineca-project.eu">info@cineca-project.eu</a>
+          <a href="mailto:info@bridgehk.org">info@bridgehk.org</a>
         </p>
         <p class="contact-2">
           Keep up to date with all our latest news and events on:
@@ -42,7 +42,7 @@ const goPage = (params) => {
     1: "/team",
     2: "/partners",
     3: "/relatedProjects",
-    4: "/scientficImpact",
+    4: "/scientificImpact",
     5: "/newsEvents",
     6: "/roadmap",
     7: "/subProjects",
