@@ -113,12 +113,11 @@ const learnAndBook = () => {
     height: 839px;
     background-color: #fff;
     text-align: center;
-    border: 1px solid #fff;
   }
   .mian {
     width: 1200px;
     margin: 0 auto;
-    // display: flex;
+   
     padding: 35px 0px;
     .section-left {
       flex: 1.5;

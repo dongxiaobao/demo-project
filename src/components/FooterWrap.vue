@@ -19,7 +19,7 @@
         <p class="link-1" @click="goPage('1')">TEAM</p>
         <p class="link-1" @click="goPage('2')">PARTNERS</p>
         <p class="link-1" @click="goPage('3')">RELATED PROJECTS</p>
-        <p class="link-1" @click="goPage('4')">SCIENTFIC IMPACT</p>
+        <p class="link-1" @click="goPage('4')">SCIENTIFIC IMPACT</p>
         <p class="link-1" @click="goPage('5')">NEWS & EVENTS</p>
       </div>
       <div class="footer-box-3">

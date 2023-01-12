@@ -49,7 +49,7 @@ const meanList = [
     title: "IMPACT",
     child: [
       {
-        title: "SCIENTFIC IMPACT",
+        title: "SCIENTIFIC IMPACT",
       },
       {
         title: "PUBLICATIONS",

@@ -10,7 +10,6 @@
 <script setup>
 import { ref } from "vue";
 let topic = ref("SCIENTIFIC IMPACT");
-scientific
 </script>
 
 <style lang="scss">

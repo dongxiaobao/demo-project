@@ -8,7 +8,7 @@
       @select="handleSelect"
     >
       <el-menu-item index="0" class="left-logo">
-        <img src="@/assets/logo.jpg" alt="" class="logo" />
+        <img src="@/assets/logo.png" alt="" class="logo" />
         <span class="text-title">
           Building Resillience with<br />Information and Dialogues<br />for
           Growth and Equality
@@ -37,7 +37,7 @@
       <el-sub-menu index="5" class="title-name">
         <template #title>IMPACT</template>
         <el-menu-item index="5-1"> NEWS & EVENTS </el-menu-item>
-        <el-menu-item index="5-2">SCIENTFIC IMPACT</el-menu-item>
+        <el-menu-item index="5-2">SCIENTIFIC IMPACT</el-menu-item>
 
         <el-menu-item index="5-3">DATABSETS</el-menu-item>
       </el-sub-menu>
@@ -145,13 +145,13 @@ const toPage = (index) => {
 <style lang="scss">
 .header {
   min-width: 1200px;
-  height: 120px;
+  height: 110px;
   border-bottom: 1px solid #ddd;
 
   .el-menu {
     width: 1200px;
     margin: 0 auto;
-    height: 120px;
+    height: 110px;
     .left-logo {
       padding-left: 0;
       .text-title {
@@ -168,8 +168,8 @@ const toPage = (index) => {
       }
     }
     .logo {
-      width: 153px;
-      height: 55px;
+      width: 85px;
+      height: 85px;
     }
     .el-menu-item {
       // color: #49b4f7;
