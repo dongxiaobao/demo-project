@@ -1,10 +1,11 @@
 <template>
   <div class="over-view">
-    <header class="header">
+    <header class="header header-22">
       <el-carousel
         indicator-position="outside"
         autoplay
         :pause-on-hover="false"
+        :interval='4000'
       >
         <el-carousel-item v-for="(item, index) in imgList" :key="index">
           <img :src="item.imgSrc" alt="" class="pic-class" />
@@ -71,9 +72,9 @@ import { ElCarousel, ElCarouselItem } from "element-plus";
 import "element-plus/es/components/carousel/style/css";
 import "element-plus/es/components/carousel-item/style/css";
 import { ref } from "vue";
-import pic01 from "@/assets/pic-01.jpeg";
-import pic02 from "@/assets/pic-02.jpeg";
-import pic03 from "@/assets/pic-03.png";
+import pic01 from "@/assets/banners-001.jpg";
+import pic02 from "@/assets/banners-002.jpg";
+import pic03 from "@/assets/banners-003.jpg";
 let imgList = ref([
   {
     imgSrc: pic01,
@@ -98,11 +99,12 @@ const learnAndBook = () => {
 .el-carousel__container {
   width: 1400px;
   margin: 0 auto;
-  height: 810px;
+   height: 652px;
 }
 .el-carousel__item {
   .pic-class {
-    height: 800px;
+
+    height: 652px;
   }
 }
 .over-view {
@@ -110,14 +112,16 @@ const learnAndBook = () => {
   text-align: left;
   .header {
     width: 100%;
-    height: 839px;
+    height: 682px;
     background-color: #fff;
     text-align: center;
+    &.header-22{
+      border-bottom: none;
+    }
   }
   .mian {
     width: 1200px;
     margin: 0 auto;
-   
     padding: 35px 0px;
     .section-left {
       flex: 1.5;

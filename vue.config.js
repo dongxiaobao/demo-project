@@ -1,11 +1,19 @@
+/*
+ * @Author: yanbao dong
+ * @Date: 2023-01-12 20:14:02
+ * @LastEditors: yanbao dong
+ * @LastEditTime: 2023-01-17 09:35:42
+ * @Description: file content
+ */
 const path = require("path");
-const AutoImport = require('unplugin-auto-import/webpack')
-const Components = require('unplugin-vue-components/webpack')
-const CompressionPlugin = require('compression-webpack-plugin');//引入gzip压缩插件
-const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
+const AutoImport = require("unplugin-auto-import/webpack");
+const Components = require("unplugin-vue-components/webpack");
+const CompressionPlugin = require("compression-webpack-plugin"); //引入gzip压缩插件
+const { ElementPlusResolver } = require("unplugin-vue-components/resolvers");
 function resolve(dir) {
   return path.join(__dirname, dir);
 }
+// const title = "BridgeHK Platform";
 module.exports = {
   publicPath: "./", //基本路径
   outputDir: "dist", //输出文件目录
@@ -13,11 +21,17 @@ module.exports = {
   // lintOnSave: 'error', // 设置eslint报错时停止代码编译
   lintOnSave: false,
   productionSourceMap: false, // 不需要生产环境的 source map（减小dist文件大小，加速构建）
+  //文件名称不带hash值
+  filenameHashing: false,
   chainWebpack: (config) => {
     // 移除 prefetch 插件(针对生产环境首屏请求数进行优化)
     config.plugins.delete("prefetch");
     // 移除 preload 插件(针对生产环境首屏请求数进行优化)
     config.plugins.delete("preload");
+    // 包分析工具
+    // config
+    // .plugin('webpack-bundle-analyzer')
+    // .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin)
     // 第1个参数：别名，第2个参数：路径  （设置路径别名）
     config.resolve.alias
       .set("@", resolve("./src"))
@@ -28,7 +42,7 @@ module.exports = {
       .set("@utils", resolve("./src/utils"));
   },
   // 配置打包 js、css文件为.gz格式，优化加载速度
-  configureWebpack: (config) => {
+  configureWebpack: () => {
     if (process.env.NODE_ENV === "production") {
       return {
         plugins: [

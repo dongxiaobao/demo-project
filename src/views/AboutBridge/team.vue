@@ -31,17 +31,36 @@
           </p>
         </div>
       </section>
+      <p class="box-1">Advisory Committee Members</p>
+      <section class="section section-3">
+        <div class="user-list" v-for="(item, index) in userList2" :key="index">
+          <img
+            :src="item.img"
+            alt=""
+            class="user-img"
+            :class="'img-user-' + index"
+          />
+          <p class="text-user-info">
+            {{ item.userInfo }}
+          </p>
+          <p class="description">
+            {{ item.description }}
+          </p>
+        </div>
+      </section>
     </main>
   </div>
 </template>
 
 <script setup>
-import { teamList1 } from "@/config/team";
+import { teamList1,teamList2 } from "@/config/team";
 import { ref } from "vue";
 
 let topic = ref("TEAM");
 let userList1 = ref([]);
 userList1.value = teamList1;
+let userList2 = ref([]);
+userList2.value = teamList2;
 </script>
 
 <style lang="scss">
@@ -214,6 +233,25 @@ userList1.value = teamList1;
           text-align: left;
           padding: 0 50px 0 82px;
         }
+      }
+    }
+    &.section-3{
+      .user-list {
+      width: 33.33%;
+      margin-bottom: 70px;
+      .user-img {
+        &.img-user-0 {
+          width: 180px;
+          // margin-top: 10px;
+          margin-bottom: 31px;
+         } 
+         &.img-user-1 {
+          width: 163px;
+          // margin-top: 10px;
+          margin-bottom: 22px;
+        
+         } 
+      }
       }
     }
   }

@@ -2,7 +2,7 @@
  * @Author: yanbao dong
  * @Date: 2023-01-02 19:19:22
  * @LastEditors: yanbao dong
- * @LastEditTime: 2023-01-10 17:44:13
+ * @LastEditTime: 2023-01-13 14:16:06
  * @Description: file content
 -->
 <template>
@@ -21,13 +21,13 @@
 </template>
 
 <script setup>
-import image1 from "@/assets/lates/article-01.webp";
+import image1 from "@/assets/lates/article-01.jpeg";
 import image2 from "@/assets/lates/article-02.jpeg";
 import image3 from "@/assets/lates/article-03.jpeg";
 import image4 from "@/assets/lates/article-04.jpeg";
-import { useRoute, useRouter } from 'vue-router';
+import {  useRouter } from 'vue-router';
 const router = useRouter();
-const route = useRoute();
+;
 import { ref } from "vue";
 let list = ref([
   {

@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header header-111">
     <el-menu
       :default-active="activeIndex"
       class="el-menu-demo"
@@ -64,13 +64,10 @@
 import { ElMenu, ElMenuItem, ElSubMenu, ElIcon } from "element-plus";
 import "element-plus/es/components/menu/style/css";
 import { Search } from "@element-plus/icons-vue";
-import { useRoute, useRouter } from "vue-router";
+import { useRouter } from "vue-router";
 const router = useRouter();
-const route = useRoute();
 import { ref } from "vue";
-
 const activeIndex = ref("1");
-let input1 = ref("");
 const handleSelect = (key, keyPath) => {
   console.log(key, keyPath);
   if (key == 0) {
@@ -142,16 +139,18 @@ const toPage = (index) => {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" >
 .header {
   min-width: 1200px;
-  height: 110px;
+  height: 120px;
   border-bottom: 1px solid #ddd;
-
+  &.header-111{
+    margin-top: 10px;
+  }
   .el-menu {
     width: 1200px;
     margin: 0 auto;
-    height: 110px;
+    height: 120px;
     .left-logo {
       padding-left: 0;
       .text-title {

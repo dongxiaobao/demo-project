@@ -59,6 +59,57 @@
         />
       </div>
     </div>
+    <div class="box-list">
+      <div class="box-item">
+        <img
+          @click="toPage('http://www.hkyps.com/')"
+          src="@/assets/partner-7.jpg"
+          alt=""
+          class="img-1 img-partner"
+        />
+      </div>
+
+      <div class="box-item">
+        <img
+          @click="toPage('http://www.hkauw.org/')"
+          src="@/assets/partner-8.png"
+          alt=""
+          class="img-2 img-partner"
+        />
+      </div>
+      <div class="box-item">
+        <img
+          @click="toPage('https://www.scmp.com/')"
+          src="@/assets/partner-9.png"
+          alt=""
+          class="img-6 img-partner"
+        />
+      </div>
+      <div class="box-item">
+        <img
+          @click="toPage('https://www.yzzk.com/')"
+          src="@/assets/partner-10.png"
+          alt=""
+          class="img-3 img-partner"
+        />
+      </div>
+      <div class="box-item">
+        <img
+          @click="toPage('https://www.intellisia.org/')"
+          src="@/assets/partner-11.png"
+          alt=""
+          class="img-4 img-partner"
+        />
+      </div>
+      <div class="box-item">
+        <img
+          @click="toPage('https://prpa.com.hk/')"
+          src="@/assets/partner-12.jpg"
+          alt=""
+          class="img-5 img-partner"
+        />
+      </div>
+    </div>
   </div>
 </template>
 <script setup>

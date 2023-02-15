@@ -2,7 +2,7 @@
  * @Author: yanbao dong
  * @Date: 2023-01-04 21:30:47
  * @LastEditors: yanbao dong
- * @LastEditTime: 2023-01-06 17:23:17
+ * @LastEditTime: 2023-01-13 14:33:19
  * @Description: file content
  */
 import Fen_Lin from "@/assets/team/Fen_Lin.jpeg";
@@ -10,10 +10,11 @@ import Li_Crystal_Jiang from "@/assets/team/Li_Crystal_Jiang.jpeg";
 import Qingpeng_Zhang from "@/assets/team/Qingpeng_Zhang.jpeg";
 import Richard_Walker from "@/assets/team/Richard_Walker.jpeg";
 import Shu_Cheong_David_Hui from "@/assets/team/Shu-Cheong_David_Hui.jpeg";
-import Tse_Chun_LIn from "@/assets/team/Tse-Chun_LIn.webp";
+import Tse_Chun_LIn from "@/assets/team/Tse-Chun_LIn.jpeg";
 import Xiaohui_Wang from "@/assets/team/Xiaohui_Wang.jpeg";
 import Ye_Sun from "@/assets/team/Ye_Sun.jpeg";
-// import Yi_Hui_Christine_Huang from "@/assets/team/Yi-Hui_Christine_Huang.jpeg";
+import Peter_John from "@/assets/team/Peter_John.jpg"; 
+import Shirly_Ho from "@/assets/team/Shirly_Ho.jpg";
 import Yue_Dai from "@/assets/team/Yue_Dai.jpeg";
 const teamList1 = [
   {
@@ -74,6 +75,15 @@ const teamList1 = [
   
 ];
 const teamList2 = [
-
+  {
+    img: Peter_John,
+    userInfo: "Peter John (KCL)",
+    description: "Professor of Public Policy",
+  },
+  {
+    img: Shirly_Ho,
+    userInfo: "Shirly Ho (NTU)",
+    description: "Chair Professor in Communication Studies",
+  },
 ]
 export { teamList1,teamList2 };

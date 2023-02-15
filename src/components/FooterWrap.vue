@@ -34,9 +34,8 @@
 </template>
 
 <script setup>
-import { useRoute, useRouter } from "vue-router";
+import {  useRouter } from "vue-router";
 const router = useRouter();
-const route = useRoute();
 const goPage = (params) => {
   const pathMap = {
     1: "/team",

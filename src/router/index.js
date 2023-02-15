@@ -2,7 +2,7 @@
  * @Author: yanbao dong
  * @Date: 2023-01-04 21:30:47
  * @LastEditors: yanbao dong
- * @LastEditTime: 2023-01-06 10:09:29
+ * @LastEditTime: 2023-01-13 14:14:30
  * @Description: file content
  */
 import { createRouter, createWebHashHistory } from "vue-router";
@@ -19,7 +19,7 @@ const routes = [...home, ...bridge, ...dissmination, ...howWeWork, ...impact,...
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior() {
     // debugger;
     // 对于是 h5-smartfund-wrap 元素的滚动
     document.getElementById("app").scrollTop = 0;
@@ -27,6 +27,6 @@ const router = createRouter({
   },
 });
 
-router.afterEach((to, from) => {});
+
 
 export default router;

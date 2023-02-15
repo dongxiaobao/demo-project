@@ -1,3 +1,10 @@
+<!--
+ * @Author: yanbao dong
+ * @Date: 2023-01-12 20:14:02
+ * @LastEditors: yanbao dong
+ * @LastEditTime: 2023-01-13 14:15:15
+ * @Description: file content
+-->
 <template>
   <Header></Header>
   <router-view v-slot="{ Component }">
@@ -25,8 +32,7 @@
 import { ref } from 'vue';
 import Header from '@/components/Header.vue'
 import FooterWrap from '@/components/FooterWrap.vue'
-import { useRoute, useRouter } from 'vue-router';
-const router = useRouter();
+import { useRoute } from 'vue-router';
 const route = useRoute();
 const transitionName = ref('');
 </script>
