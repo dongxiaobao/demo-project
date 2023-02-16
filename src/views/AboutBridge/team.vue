@@ -14,7 +14,7 @@
         <p class="text-user-info">Yi-Hui Christine HUANG (CityU)</p>
         <p class="description">Chair Professor of Communication and Media</p>
       </section>
-      <p class="box-1">Co-Principal Investigator</p>
+      <p class="box-1">Co-Principal Investigators</p>
       <section class="section">
         <div class="user-list" v-for="(item, index) in userList1" :key="index">
           <img
