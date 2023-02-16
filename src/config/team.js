@@ -13,7 +13,7 @@ import Shu_Cheong_David_Hui from "@/assets/team/Shu-Cheong_David_Hui.jpeg";
 import Tse_Chun_LIn from "@/assets/team/Tse-Chun_LIn.jpeg";
 import Xiaohui_Wang from "@/assets/team/Xiaohui_Wang.jpeg";
 import Ye_Sun from "@/assets/team/Ye_Sun.jpeg";
-import Peter_John from "@/assets/team/Peter_John.jpg"; 
+import Peter_John from "@/assets/team/Peter_John.jpg";
 import Shirly_Ho from "@/assets/team/Shirly_Ho.jpg";
 import Yue_Dai from "@/assets/team/Yue_Dai.jpeg";
 const teamList1 = [
@@ -54,7 +54,6 @@ const teamList1 = [
     description: "Associate Professor of Data Science",
   },
 
-  
   {
     img: Yue_Dai,
     userInfo: "Yue DAI (CityU)",
@@ -71,8 +70,6 @@ const teamList1 = [
   //   userInfo: "Prof. Yi-Hui Christine HUANG (CityU)",
   //   description: "介绍",
   // },
-
-  
 ];
 const teamList2 = [
   {
@@ -85,5 +82,5 @@ const teamList2 = [
     userInfo: "Shirly Ho (NTU)",
     description: "Chair Professor in Communication Studies",
   },
-]
-export { teamList1,teamList2 };
+];
+export { teamList1, teamList2 };

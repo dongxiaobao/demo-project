@@ -2,6 +2,7 @@
 const socialMedia = () => import("@/views/Dissmination/socialMedia.vue");
 const webinars = () => import("@/views/Dissmination/webinars.vue");
 const publications = () => import("@/views/Impact/publications.vue");
+const references = () => import("@/views/Dissmination/references.vue");
 const dissmination = [
   {
     path: "/publications",
@@ -27,6 +28,15 @@ const dissmination = [
     component: webinars,
     meta: {
       title: "webinars",
+      keepAlive: true,
+    },
+  },
+  {
+    path: "/references",
+    name: "references",
+    component: references,
+    meta: {
+      title: "references",
       keepAlive: true,
     },
   },

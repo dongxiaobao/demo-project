@@ -33,6 +33,7 @@
         <el-menu-item index="4-1">PUBLICATIONS</el-menu-item>
         <el-menu-item index="4-2">WEBINARS</el-menu-item>
         <el-menu-item index="4-3">SOCIAL MEDIA</el-menu-item>
+        <el-menu-item index="4-4">REFERENCES</el-menu-item>
       </el-sub-menu>
       <el-sub-menu index="5" class="title-name">
         <template #title>IMPACT</template>
@@ -114,6 +115,10 @@ const handleSelect = (key, keyPath) => {
     router.push({
       path: "/socialMedia",
     });
+  } else if (key == "4-4") {
+    router.push({
+      path: "/references",
+    });
   } else if (key == "5-1") {
     router.push({
       path: "/newsEvents",
@@ -139,12 +144,12 @@ const toPage = (index) => {
 };
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 .header {
   min-width: 1200px;
   height: 120px;
   border-bottom: 1px solid #ddd;
-  &.header-111{
+  &.header-111 {
     margin-top: 10px;
   }
   .el-menu {

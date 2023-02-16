@@ -53,7 +53,7 @@
 </template>
 
 <script setup>
-import { teamList1,teamList2 } from "@/config/team";
+import { teamList1, teamList2 } from "@/config/team";
 import { ref } from "vue";
 
 let topic = ref("TEAM");
@@ -235,23 +235,22 @@ userList2.value = teamList2;
         }
       }
     }
-    &.section-3{
+    &.section-3 {
       .user-list {
-      width: 33.33%;
-      margin-bottom: 70px;
-      .user-img {
-        &.img-user-0 {
-          width: 180px;
-          // margin-top: 10px;
-          margin-bottom: 31px;
-         } 
-         &.img-user-1 {
-          width: 163px;
-          // margin-top: 10px;
-          margin-bottom: 22px;
-        
-         } 
-      }
+        width: 33.33%;
+        margin-bottom: 70px;
+        .user-img {
+          &.img-user-0 {
+            width: 180px;
+            // margin-top: 10px;
+            margin-bottom: 31px;
+          }
+          &.img-user-1 {
+            width: 163px;
+            // margin-top: 10px;
+            margin-bottom: 22px;
+          }
+        }
       }
     }
   }
