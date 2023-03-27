@@ -81,12 +81,51 @@
           focusing on constructing models and theories of Chinese communication.
         </p>
       </div>
-      
+      <div class="pdf-box">
+        <p class="header-title">
+          Selected Powerpoint Slides from the President Lecture
+        </p>
+        <div class="pdf" @click="toPdf">
+          <div class="left">
+            <img src="@/assets/Webinars/pdf-icon.jpg" alt="" class="pdf-logo" />
+          </div>
+          <div class="right">
+            <p class="">P Lecture for STG.pdf</p>
+            <p class="k-b">677.83 KB</p>
+          </div>
+        </div>
+      </div>
+      <footer class="footer-box">
+        <p class="text-1">News releases:</p>
+        <p class="text-2">
+          <a
+            href="https://www.cityu.edu.hk/media/news/2023/03/13/strategic-communication-trust-and-culture-paradigmatic-shifting-perspective"
+            >https://www.cityu.edu.hk/media/news/2023/03/13/strategic-communication-trust-and-culture-paradigmatic-shifting-perspective</a
+          >
+        </p>
+        <p class="text-2">
+          <a
+            href="https://www.cityu.edu.hk/zh-hk/media/news/2023/03/13/strategic-communication-trust-and-culture-paradigmatic-shifting-perspective"
+            >https://www.cityu.edu.hk/zh-hk/media/news/2023/03/13/strategic-communication-trust-and-culture-paradigmatic-shifting-perspective</a
+          >
+        </p>
+        <p class="text-1">Recordings:</p>
+        <p class="text-2">
+          <a
+            href="https://cityuhk-lms.ap.panopto.com/Panopto/Pages/Viewer.aspx?id=858d0e63-28ec-4231-9a98-afbe00647ab4"
+            >https://cityuhk-lms.ap.panopto.com/Panopto/Pages/Viewer.aspx?id=858d0e63-28ec-4231-9a98-afbe00647ab4</a
+          >
+        </p>
+      </footer>
     </main>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const toPdf = ()=>{
+  window.open('/pdf/P-Lecture-for-STG.pdf')
+}
+</script>
 
 <style lang="scss">
 .PageList-1-wrap {
@@ -120,6 +159,48 @@
         .font-bold {
           font-weight: 600;
           line-height: 1.5;
+        }
+      }
+    }
+    .pdf-box {
+      margin-top: 50px;
+      .header-title {
+        margin-bottom: 10px;
+      }
+      .pdf {
+        display: flex;
+        padding: 20px;
+        background: #f3f5f7;
+        border-radius: 4px;
+        align-items: center;
+        cursor: pointer;
+        .left {
+          width: 50px;
+          height: 50px;
+          margin-right: 20px;
+          .pdf-logo {
+            width: 100%;
+          }
+        }
+        .right {
+          .k-b {
+            font-size: 12px;
+            color: #00000066;
+          }
+        }
+      }
+    }
+    .footer-box {
+      margin-top: 50px;
+      .text-1 {
+        margin-top: 30px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      .text-2 {
+        margin-bottom: 10px;
+        a {
+          color: #1e6fff;
         }
       }
     }
