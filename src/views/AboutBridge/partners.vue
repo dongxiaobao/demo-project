@@ -3,7 +3,15 @@
     <header class="header-box">
       <p class="title-page">{{ topic }}</p>
     </header>
-    <main class="main-box">PARTNERS</main>
+    <main class="main-box">
+
+      <header class="title">
+        In our mission to connect our beneficiaries and stakeholders with timely support for resilience, growth and equality, the BRIDGE team has established partnerships with the following organizations.
+      </header>
+      <p class="img-box">
+        <img class="img-bgd" src="@/assets/Partner/partner-01.png" alt="">
+      </p>
+    </main>
   </div>
 </template>
 
@@ -36,6 +44,19 @@ let topic = ref("PARTNERS");
     width: 1200px;
     margin: 0 auto;
     padding: 90px 30px;
+    .title{
+       font-size: 22px;
+        font-weight: 600;
+        color: #222;
+        line-height: 1.5;
+    }
+    .img-box{
+      width: 100%;
+      margin-top: 30px;
+      .img-bgd{
+        width: 100%;
+      }
+    }
   }
 }
 </style>
