@@ -1,8 +1,17 @@
+/*
+ * @Author: yanbao dong
+ * @Date: 2023-02-16 22:45:37
+ * @LastEditors: yanbao dong
+ * @LastEditTime: 2023-03-27 17:50:38
+ * @Description: file content
+ */
 
 const socialMedia = () => import("@/views/Dissmination/socialMedia.vue");
 const webinars = () => import("@/views/Dissmination/webinars.vue");
 const publications = () => import("@/views/Impact/publications.vue");
 const references = () => import("@/views/Dissmination/references.vue");
+const webinarsDetails = () => import("@/views/Dissmination/webinarsDetails.vue");
+
 const dissmination = [
   {
     path: "/publications",
@@ -37,6 +46,15 @@ const dissmination = [
     component: references,
     meta: {
       title: "references",
+      keepAlive: true,
+    },
+  },
+  {
+    path: "/webinarsDetails",
+    name: "webinarsDetails",
+    component: webinarsDetails,
+    meta: {
+      title: "webinarsDetails",
       keepAlive: true,
     },
   },

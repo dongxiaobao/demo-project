@@ -2,7 +2,7 @@
  * @Author: yanbao dong
  * @Date: 2023-01-12 20:14:02
  * @LastEditors: yanbao dong
- * @LastEditTime: 2023-01-17 09:35:42
+ * @LastEditTime: 2023-03-27 17:12:42
  * @Description: file content
  */
 const path = require("path");
@@ -13,26 +13,25 @@ const { ElementPlusResolver } = require("unplugin-vue-components/resolvers");
 function resolve(dir) {
   return path.join(__dirname, dir);
 }
-// const title = "BridgeHK Platform";
 module.exports = {
   publicPath: "./", //基本路径
   outputDir: "dist", //输出文件目录
   assetsDir: "static", //css js 等静态文件目录
-  // lintOnSave: 'error', // 设置eslint报错时停止代码编译
   lintOnSave: false,
   productionSourceMap: false, // 不需要生产环境的 source map（减小dist文件大小，加速构建）
-  //文件名称不带hash值
-  filenameHashing: false,
   chainWebpack: (config) => {
     // 移除 prefetch 插件(针对生产环境首屏请求数进行优化)
     config.plugins.delete("prefetch");
     // 移除 preload 插件(针对生产环境首屏请求数进行优化)
     config.plugins.delete("preload");
-    // 包分析工具
-    // config
-    // .plugin('webpack-bundle-analyzer')
-    // .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin)
-    // 第1个参数：别名，第2个参数：路径  （设置路径别名）
+    config.resolve.symlinks(true); // 修复热更新失效
+    // 如果使用多页面打包，使用vue inspect --plugins查看html是否在结果数组中
+    config.plugin('html').tap((args) => {
+      // 修复 Lazy loading routes Error
+      args[0].chunksSortMode = 'none';
+      args[0].title = 'BRIDGE';
+      return args;
+    });
     config.resolve.alias
       .set("@", resolve("./src"))
       .set("@views", resolve("./src/views"))
@@ -40,6 +39,21 @@ module.exports = {
       .set("@imgs", resolve("./src/imgs"))
       .set("@assets", resolve("./src/assets"))
       .set("@utils", resolve("./src/utils"));
+  },
+  css: {
+    loaderOptions: {
+      sass: {
+        additionalData: '@import "~@/scss/reset.sass"',
+      },
+      scss: {
+        additionalData: '@import "~@/scss/reset.scss";',
+      },
+      less: {
+        globalVars: {
+          primary: '#fff',
+        },
+      },
+    },
   },
   // 配置打包 js、css文件为.gz格式，优化加载速度
   configureWebpack: () => {
@@ -69,4 +83,9 @@ module.exports = {
       };
     }
   },
+  devServer: {
+    host: 'localhost',
+    port: 8080, // 端口号
+  },
+ 
 };

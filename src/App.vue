@@ -2,7 +2,7 @@
  * @Author: yanbao dong
  * @Date: 2023-01-12 20:14:02
  * @LastEditors: yanbao dong
- * @LastEditTime: 2023-01-13 14:15:15
+ * @LastEditTime: 2023-03-27 16:55:49
  * @Description: file content
 -->
 <template>
@@ -38,7 +38,7 @@ const transitionName = ref('');
 </script>
 
 <style lang="scss">
-@import '@/scss/reset.scss';
+// @import '@/scss/reset.scss';
 @import '@/scss/common.scss';
 #app {
  width: 100%;
