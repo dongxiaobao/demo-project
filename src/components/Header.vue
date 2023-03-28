@@ -40,7 +40,7 @@
         <el-menu-item index="5-1"> NEWS & EVENTS </el-menu-item>
         <el-menu-item index="5-2">SCIENTIFIC IMPACT</el-menu-item>
 
-        <el-menu-item index="5-3">DATABSETS</el-menu-item>
+        <el-menu-item index="5-3">DATASETS</el-menu-item>
       </el-sub-menu>
       <div class="search-box">
         <div class="top-box">

@@ -123,7 +123,7 @@
 
 <script setup>
 const toPdf = ()=>{
-  window.open('/pdf/P-Lecture-for-STG.pdf')
+  window.open('/bridge/pdf/P-Lecture-for-STG.pdf')
 }
 </script>
 

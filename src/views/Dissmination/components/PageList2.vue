@@ -2,7 +2,7 @@
  * @Author: yanbao dong
  * @Date: 2023-03-27 18:07:41
  * @LastEditors: yanbao dong
- * @LastEditTime: 2023-03-27 18:08:57
+ * @LastEditTime: 2023-03-28 11:24:19
  * @Description: file content
 -->
 <template>
@@ -33,7 +33,7 @@
 
 <script setup>
 const toPdf = ()=>{
-  window.open('/pdf/SDH-0322.pdf')
+  window.open('/bridge/pdf/SDH-0322.pdf')
 }
 </script>
 

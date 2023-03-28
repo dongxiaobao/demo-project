@@ -1,3 +1,10 @@
+/*
+ * @Author: yanbao dong
+ * @Date: 2023-03-27 19:47:34
+ * @LastEditors: yanbao dong
+ * @LastEditTime: 2023-03-28 17:59:36
+ * @Description: file content
+ */
 const meanList = [
   {
     title: "HOME",
@@ -55,7 +62,7 @@ const meanList = [
         title: "PUBLICATIONS",
       },
       {
-        title: "DATABSETS",
+        title: "DATASETS",
       },
     ],
   },

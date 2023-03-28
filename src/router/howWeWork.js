@@ -2,6 +2,7 @@ const deliverables = () => import("@/views/HowWeWork/deliverables.vue");
 const roadmap = () => import("@/views/HowWeWork/roadmap.vue");
 const subProjects = () => import("@/views/HowWeWork/subProjects.vue");
 const sp1 = () => import("@/views/HowWeWork/sp1.vue");
+const spDetails = () => import("@/views/HowWeWork/details.vue");
 const HowWeWork = [
   {
     path: "/deliverables",
@@ -36,6 +37,15 @@ const HowWeWork = [
     component: sp1,
     meta: {
       title: "sp1",
+      keepAlive: true,
+    },
+  },
+  {
+    path: "/subProject/details",
+    name: "spDetails",
+    component: spDetails,
+    meta: {
+      title: "spDetails",
       keepAlive: true,
     },
   },

@@ -21,7 +21,7 @@
             {{ item.title }}
           </p>
           <p class="content" v-html="item.content"></p>
-          <p class="read-more" @click="toPageMore">VIEW PROJECT</p>
+          <p class="read-more" @click="toPageMore(index)">VIEW PROJECT</p>
         </div>
       </div>
       <div class="box-1">
@@ -33,7 +33,7 @@
             {{ item.title }}
           </p>
           <p class="content" v-html="item.content"></p>
-          <p class="read-more" @click="toPageMore">VIEW PROJECT</p>
+          <p class="read-more" @click="toViewProject(index)">VIEW PROJECT</p>
         </div>
       </div>
     </main>
@@ -98,13 +98,28 @@ const list2 = ref([
     link: "",
   },
 ]);
-import { useRoute, useRouter } from "vue-router";
+import { useRouter } from "vue-router";
 const router = useRouter();
-const route = useRoute();
-const toPageMore = () => {
-  // debugger
+const toPageMore = (params) => {
+  if (params === 0) {
+    router.push({
+      path: "/subProject/SP1",
+    });
+    return;
+  }
   router.push({
-    path: "/subProject/SP1",
+    path: "/subProject/details",
+    query: {
+      id: params + 1,
+    },
+  });
+};
+const toViewProject = (params) => {
+  router.push({
+    path: "/subProject/details",
+    query: {
+      id: params + 4,
+    },
   });
 };
 </script>

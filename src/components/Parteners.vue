@@ -2,7 +2,7 @@
  * @Author: yanbao dong
  * @Date: 2023-01-04 21:30:47
  * @LastEditors: yanbao dong
- * @LastEditTime: 2023-01-06 11:05:21
+ * @LastEditTime: 2023-03-28 17:57:48
  * @Description: file content
 -->
 <template>
@@ -36,11 +36,11 @@ import partner10 from "@/assets/partner-10.png";
 import partner11 from "@/assets/partner-11.png";
 import partner12 from "@/assets/partner-12.jpg";
 import partner13 from "@/assets/partner-13.png";
-import partner14 from "@/assets/partner-14.jpg";
-import partner15 from "@/assets/partner-15.png";
-import partner16 from "@/assets/partner-18.jpg";
+// import partner14 from "@/assets/partner-14.jpg";
+// import partner15 from "@/assets/partner-15.png";
+// import partner16 from "@/assets/partner-18.jpg";
 import partner17 from "@/assets/partner-16.png";
-import partner18 from "@/assets/partner-17.png";
+// import partner18 from "@/assets/partner-17.png";
 const list = ref([
   {
     name: "https://www.cityu.edu.hk/",
@@ -107,31 +107,31 @@ const list = ref([
     imgSrc: partner13,
     className: "img-13",
   },
-  {
-    name: "https://www.nphk.hk/",
-    imgSrc: partner14,
-    className: "img-14",
-  },
-  {
-    name: "http://www.hkcivicassn.org/",
-    imgSrc: partner15,
-    className: "img-15",
-  },
-  {
-    name: "https://soco.org.hk/",
-    imgSrc: partner16,
-    className: "img-16",
-  },
+  // {
+  //   name: "https://www.nphk.hk/",
+  //   imgSrc: partner14,
+  //   className: "img-14",
+  // },
+  // {
+  //   name: "http://www.hkcivicassn.org/",
+  //   imgSrc: partner15,
+  //   className: "img-15",
+  // },
+  // {
+  //   name: "https://soco.org.hk/",
+  //   imgSrc: partner16,
+  //   className: "img-16",
+  // },
   {
     name: "https://www.aka.org.hk/",
     imgSrc: partner17,
     className: "img-17",
   },
-  {
-    name: "https://hknasfwork.wixsite.com/website",
-    imgSrc: partner18,
-    className: "img-18",
-  },
+  // {
+  //   name: "https://hknasfwork.wixsite.com/website",
+  //   imgSrc: partner18,
+  //   className: "img-18",
+  // },
 ]);
 const toPage = (url) => {
   window.open(url);
